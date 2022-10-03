@@ -110,7 +110,7 @@ export class MosaicImage {
         return new Promise<Image[]>( (resolve, reject) => {
             let _tilesDir = tilesDirectory ? tilesDirectory : this.tilesDirectory;
             let numberOfTiles = fs.readdirSync( _tilesDir ).length;
-            if( numberOfTiles === 0 ) {
+            if( numberOfTiles === 1 ) {
                 throw new Error('There are no tiles in the directory ' + _tilesDir);
             }
             if(this.enableConsoleLogging) console.log(`${new Date().toString()} - Reading tiles from ${_tilesDir}, ${numberOfTiles} found...`);
@@ -127,7 +127,7 @@ export class MosaicImage {
                 else {
                     i++;
                 }
-                if( i === numberOfTiles ) {
+                if( i === (numberOfTiles - 1) ) {
                     if(this.enableConsoleLogging) console.log(`${new Date().toString()} - Finished reading tiles.`);
                     resolve( this.tiles );
                 }

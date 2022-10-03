@@ -1,6 +1,6 @@
 export var CONFIG = {
     "tiles_directory": "photos", //default tiles folder
-    "output_image_name": "outputs/output", //default image output name
+    "output_image_name": "output/final/output", //default image output name
     "cell_width": 50, //default cell width (in pixels, width of each tile in the image)
     "cell_height": 50, //default cell height (in pixels, height of each tile in the image)
     "columns": 100, //image will have at least this number of columns
