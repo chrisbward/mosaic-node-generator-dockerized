@@ -1,0 +1,9 @@
+test/
+dist/
+node_modules/
+README.md
+.gitignore
+.nvmrc
+LICENSE
+Makefile
+source_images

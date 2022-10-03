@@ -1,13 +1,47 @@
 [![Build Status](https://travis-ci.org/Dellos7/mosaic-node-generator.svg?branch=master)](https://travis-ci.org/Dellos7/mosaic-node-generator) [![npm version](https://badge.fury.io/js/mosaic-node-generator.svg)](https://badge.fury.io/js/mosaic-node-generator) [![HitCount](http://hits.dwyl.io/Dellos7/mosaic-node-generator.svg)](http://hits.dwyl.io/Dellos7/mosaic-node-generator)
 
 # mosaic-node-generator
-A Node module to generate mosaic images.
+A Node module to generate mosaic images, now wrapped in a Docker container for automation.
 
 [<img src="https://github.com/Dellos7/mosaic-node-generator-example/raw/master/input.jpg" width="300" align="left" />](https://github.com/Dellos7/mosaic-node-generator-example/raw/master/input.jpg)
 
 [<img src="https://github.com/Dellos7/mosaic-node-generator-example/blob/master/outputs/output_rc-100_30x30.jpg" width="300" />](https://github.com/Dellos7/mosaic-node-generator-example/blob/master/outputs/output_rc-100_30x30.jpg)
 
 ## Installation
+
+
+## Docker
+
+If you have Make installed, here's a quickstart;
+
+```sh
+# build the docker container
+make build-docker-image
+# drop your images in, then...
+make run-docker
+```
+
+### Building the container
+
+```
+docker build . -t chrisbward/mosaic-generator:latest
+```
+
+### Running the container
+
+Before you run this command, make sure you;
+
+- drop a desired source image in to source_images/desires/input.jpg
+- place your collection of photos inside source_images/collection/
+
+```
+docker run -v $(pwd)/source_images/:/usr/src/app/source_images/ -v $(pwd)/output/:/usr/src/app/output/ chrisbward/mosaic-generator:latest
+``` 
+Your stitched collage will now appear in the output folder.
+
+--- 
+
+## Installing directly via NodeJS
 
 You must have [Node.js](https://nodejs.org/es/) installed in your system.
 
