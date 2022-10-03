@@ -1,6 +1,7 @@
  
 source_images/**/*.png
 source_images/**/*.jpg
+!source_images/desired/photo.jpg
 # Logs
 logs
 *.log
