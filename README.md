@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Dellos7/mosaic-node-generator.svg?branch=master)](https://travis-ci.org/Dellos7/mosaic-node-generator) [![npm version](https://badge.fury.io/js/mosaic-node-generator.svg)](https://badge.fury.io/js/mosaic-node-generator) [![HitCount](http://hits.dwyl.io/Dellos7/mosaic-node-generator.svg)](http://hits.dwyl.io/Dellos7/mosaic-node-generator)
 
-# mosaic-node-generator
+# mosaic-node-generator (dockerized)
 A Node module to generate mosaic images, now wrapped in a Docker container for automation.
 
 [<img src="https://github.com/Dellos7/mosaic-node-generator-example/raw/master/input.jpg" width="300" align="left" />](https://github.com/Dellos7/mosaic-node-generator-example/raw/master/input.jpg)
